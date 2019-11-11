@@ -1,0 +1,27 @@
+{
+  "name": "@victorotavio/employee-list",
+  "version": "1.0.0",
+  "description": "List of employees made with Vue, Bulma, Node.js and MySQL",
+  "main": "app.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VictorOtavio/employee-list.git"
+  },
+  "keywords": [
+    "Node.js",
+    "Express",
+    "JWT",
+    "MySQL"
+  ],
+  "author": "Victor Otávio <victor@otavioferreira.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VictorOtavio/employee-list/issues"
+  },
+  "homepage": "https://github.com/VictorOtavio/employee-list#readme"
+}
