@@ -1,0 +1,25 @@
+$blue: #2470c4;
+$cyan: #5bc0de;
+$green: #01c94f;
+$yellow: #f1c40f;
+$red: #e74c3c;
+
+$primary: $blue;
+$info: $cyan;
+$success: $green;
+$warning: $yellow;
+$danger: $red;
+
+.has-text-cursive {
+  font-family: 'Lobster', cursive;
+}
+
+.navbar .navbar-brand .navbar-item {
+  @extend .has-text-cursive;
+  font-size: 1.6rem;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import '~bulma/bulma';
+@import "~buefy/src/scss/buefy.scss";
+@import "~@fortawesome/fontawesome-free/css/all.css";
