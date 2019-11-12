@@ -13,9 +13,9 @@
     <template slot="end">
       <b-navbar-item tag="div">
         <div class="buttons">
-          <router-link :to="{ name: 'login' }" class="button is-info">
+          <button class="button is-info" @click.prevent="logout">
             <strong>Logout</strong>
-          </router-link>
+          </button>
         </div>
       </b-navbar-item>
     </template>
@@ -24,6 +24,16 @@
 
 <script>
 export default {
-  name: "TheNavbar"
+  name: "TheNavbar",
+
+  methods: {
+    logout() {
+      this.$buefy.dialog.confirm({
+        type: "is-warning",
+        message: "Tem certeza que deseja sair?",
+        onConfirm: () => this.$auth.logout()
+      });
+    }
+  }
 };
 </script>

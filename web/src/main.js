@@ -3,6 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import "./setup/interface";
+import "./setup/vue-auth";
 
 Vue.config.productionTip = false;
 
