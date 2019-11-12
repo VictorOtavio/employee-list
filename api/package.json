@@ -2,15 +2,24 @@
   "name": "@victorotavio/employee-list",
   "version": "1.0.0",
   "description": "List of employees made with Vue, Bulma, Node.js and MySQL",
-  "main": "app.js",
-  "dependencies": {},
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "author": "Victor Otávio <victor@otavioferreira.com.br>",
+  "license": "MIT",
+  "homepage": "https://github.com/VictorOtavio/employee-list#README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/VictorOtavio/employee-list.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VictorOtavio/employee-list/issues"
+  },
+  "main": "app.js",
+  "scripts": {
+    "serve": "NODE_ENV=development nodemon --exec babel-node ./src/bin/www",
+    "serve:prod": "node ./dist/bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf dist",
+    "build": "babel ./src --out-dir dist",
+    "prod": "NODE_ENV=production npm-run-all clean build serve:prod"
   },
   "keywords": [
     "Node.js",
@@ -18,10 +27,24 @@
     "JWT",
     "MySQL"
   ],
-  "author": "Victor Otávio <victor@otavioferreira.com.br>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/VictorOtavio/employee-list/issues"
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "~1.9.1",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.0"
   },
-  "homepage": "https://github.com/VictorOtavio/employee-list#readme"
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/node": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "nodemon": "^1.19.4"
+  }
 }
