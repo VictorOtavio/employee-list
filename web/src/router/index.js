@@ -12,12 +12,14 @@ const routes = [
   {
     path: "/",
     name: "home",
-    component: loadView("PageHome")
+    component: loadView("PageHome"),
+    meta: { auth: true }
   },
   {
     path: "/login",
     name: "login",
-    component: loadView("PageLogin")
+    component: loadView("PageLogin"),
+    meta: { auth: false }
   }
 ];
 
