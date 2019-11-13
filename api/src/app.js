@@ -4,7 +4,6 @@ import logger from "morgan";
 import express from "express";
 import cookieParser from "cookie-parser";
 
-import indexRouter from "./routes/index";
 import employeesRouter from "./routes/employees";
 import authRouter from "./routes/auth";
 
@@ -20,7 +19,6 @@ app.use(
   })
 );
 
-app.use("/", indexRouter);
 app.use("/employees", employeesRouter);
 app.use("/auth", authRouter);
 

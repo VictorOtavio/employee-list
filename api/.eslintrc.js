@@ -6,18 +6,14 @@ module.exports = {
   },
   extends: "prettier",
   plugins: ["prettier"],
-  globals: {
-    Atomics: "readonly",
-    SharedArrayBuffer: "readonly"
-  },
+  parser: "babel-eslint",
   rules: {
     "prettier/prettier": "error",
     "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off"
   },
-  parser: "babel-eslint",
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: "module"
+  globals: {
+    Atomics: "readonly",
+    SharedArrayBuffer: "readonly"
   }
 };
