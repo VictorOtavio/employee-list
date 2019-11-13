@@ -4,7 +4,7 @@
     <div class="container">
       <main class="section">
         <div class="card">
-          <div class="card-header has-background-primary">
+          <div class="card-header has-background-dark">
             <div class="card-header-title">
               <h1 class="title is-4 has-text-white">Empregados</h1>
             </div>
