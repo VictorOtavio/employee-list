@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import config from "../../config";
+import config from "../config";
 
 const checkToken = (req, res, next) => {
   // Express headers are auto converted to lowercase
