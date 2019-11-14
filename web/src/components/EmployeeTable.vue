@@ -22,12 +22,22 @@
     <template slot="empty">
       <section class="section">
         <div class="content has-text-grey has-text-centered">
-          <b-icon
-            icon="exclamation-triangle"
-            size="is-large"
-            class="has-text-warning"
-          />
-          <p>Nada encontrado</p>
+          <template v-if="isLoading">
+            <b-icon
+              icon="exclamation-triangle"
+              size="is-large"
+              class="has-text-warning"
+            />
+            <p>Nada encontrado</p>
+          </template>
+          <template v-else>
+            <b-icon
+              icon="circle-notch"
+              size="is-large"
+              custom-class="fa-spin"
+            />
+            <p>Carregando...</p>
+          </template>
         </div>
       </section>
     </template>
