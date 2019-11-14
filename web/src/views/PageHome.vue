@@ -1,5 +1,5 @@
 <template>
-  <div class="has-background-grey-lighter">
+  <div>
     <the-navbar />
     <div class="container">
       <main class="section">

@@ -10,6 +10,15 @@ $success: $green;
 $warning: $yellow;
 $danger: $red;
 
+html {
+  min-height: 100%;
+}
+
+body,
+#app.is-fullheight {
+  min-height: 100vh;
+}
+
 .has-text-cursive {
   font-family: 'Lobster', cursive;
 }
