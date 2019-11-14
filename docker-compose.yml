@@ -1,6 +1,8 @@
 version: "3"
 
 networks:
+  frontend:
+    driver: bridge
   database:
     driver: bridge
 
@@ -11,6 +13,46 @@ volumes:
     driver: local
 
 services:
+  ### API ###################################################
+  api:
+    build:
+      context: ./api
+      args:
+        - NODE_VERSION=${API_NODE_VERSION}
+        - DB_HOST=${API_DB_HOST}
+        - DB_PORT=${API_DB_PORT}
+        - DB_DATABASE=${API_DB_DATABASE}
+        - DB_USERNAME=${API_DB_USERNAME}
+        - DB_PASSWORD=${API_DB_PASSWORD}
+    ports:
+      - "${API_PORT}:3000"
+    environment:
+      - JWT_SECRET=${API_JWT_SECRET}
+      - DB_HOST=${API_DB_HOST}
+      - DB_PORT=${API_DB_PORT}
+      - DB_DATABASE=${API_DB_DATABASE}
+      - DB_USERNAME=${API_DB_USERNAME}
+      - DB_PASSWORD=${API_DB_PASSWORD}
+    depends_on:
+      - mariadb
+    networks:
+      - frontend
+      - database
+
+  ### WEB ###################################################
+  web:
+    build:
+      context: ./web
+      args:
+        - NODE_VERSION=${API_NODE_VERSION}
+        - VUE_APP_API_BASE_URL=${WEB_API_BASE_URL}
+    ports:
+      - "${WEB_PORT}:8080"
+    depends_on:
+      - api
+    networks:
+      - frontend
+
   ### MariaDB ###############################################
   mariadb:
     build:
