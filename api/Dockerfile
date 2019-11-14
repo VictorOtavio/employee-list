@@ -8,7 +8,7 @@ ARG DB_USERNAME
 ARG DB_PASSWORD
 WORKDIR /app
 COPY package*.json ./
-RUN npm install --production
+RUN npm install
 COPY . .
 RUN NODE_ENV=production npx npm-run-all clean build
 EXPOSE 3000

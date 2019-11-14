@@ -5,7 +5,7 @@ ARG VUE_APP_API_BASE_URL
 WORKDIR /app
 COPY package*.json ./
 RUN npm install -g http-server && \
-    npm install --production
+    npm install
 COPY . .
 RUN npm run build
 EXPOSE 8080
