@@ -1,16 +1,16 @@
 {
-  "name": "@victorotavio/employee-list",
+  "name": "@vctrtvfrrr/employee-list",
   "version": "1.0.0",
   "description": "List of employees made with Vue, Bulma, Node.js and MySQL",
   "author": "Victor Otávio <victor@otavioferreira.com.br>",
   "license": "MIT",
-  "homepage": "https://github.com/VictorOtavio/employee-list#README.md",
+  "homepage": "https://github.com/vctrtvfrrr/employee-list#README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VictorOtavio/employee-list.git"
+    "url": "git+https://github.com/vctrtvfrrr/employee-list.git"
   },
   "bugs": {
-    "url": "https://github.com/VictorOtavio/employee-list/issues"
+    "url": "https://github.com/vctrtvfrrr/employee-list/issues"
   },
   "main": "app.js",
   "scripts": {
